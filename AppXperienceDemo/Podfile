@@ -1,0 +1,4 @@
+platform :ios, '5.0'
+pod 'MKNetworkKit',           '~> 0.85'
+pod 'SDWebImage', '~> 3.1'
+
