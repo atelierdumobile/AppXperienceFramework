@@ -26,8 +26,8 @@
     [[AppXperience sharedManager] setDeveloperKey:@"ABCDEF"];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    UIViewController *viewController1 = [[InAppViewController alloc] initWithNibName:@"SecondViewController" bundle:nil];
-    UIViewController *viewController2 = [[ParameterViewController alloc] initWithNibName:@"FirstViewController" bundle:nil];
+    UIViewController *viewController1 = [[InAppViewController alloc] initWithNibName:@"InAppViewController" bundle:nil];
+    UIViewController *viewController2 = [[ParameterViewController alloc] initWithNibName:@"ParameterViewController" bundle:nil];
     
     // Call AppXperience to recup OfferwallViewController with no headerView
     // You must use offerWallViewControllerFromTabBar if you want to implement

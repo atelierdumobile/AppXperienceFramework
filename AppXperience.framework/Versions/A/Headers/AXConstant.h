@@ -26,6 +26,9 @@
 #define kAXDownloadInformationTranslation @"AXDdownloadInformationTranslation"
 #define kAXDescriptionTranslation @"AXDescriptionTranslation"
 
+#define kAXLastConnexion @"AXLastConnexionDate"
+#define kAXIntervalBeforReload 300
+
 #define kAXDomain @"AXdomain"
 #define kAXErrorDataNotValidInWS 406 //not valid object
 

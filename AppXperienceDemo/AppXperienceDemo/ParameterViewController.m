@@ -84,28 +84,44 @@
 - (IBAction)didTouchFetchDataButton:(id)sender {
     // Prepare data for not have to wait when you call offerWallViewControllerFromModa
     // You can use numberNewApps to indicate the number of new application since last connexion
-    [[AppXperience sharedManager] prepareOrRefreshOfferWallDataWithCompletion:^(BOOL success, NSNumber *numberNewApps) {
-        if (success) {
-            [self.numberOfNewAppsL setText:[numberNewApps stringValue]];
-            
-            // Use [AppXperience sharedManager] lastConnexionDate] if you want to have the last
-            // connexion date
-            NSString *dateStr = [NSDateFormatter localizedStringFromDate:[[AppXperience sharedManager] lastConnexionDate]
-                                                               dateStyle:NSDateFormatterShortStyle
-                                                               timeStyle:NSDateFormatterShortStyle];
-            
-            [self.lastConnexionL setText:dateStr];
-        }
+    [[AppXperience sharedManager] prepareOrRefreshOfferWallDataWithCompletion:^(NSNumber *numberNewApps) {
+        [self.numberOfNewAppsL setText:[numberNewApps stringValue]];
+        
+        // Use [AppXperience sharedManager] lastConnexionDate] if you want to have the last
+        // connexion date
+        NSString *dateStr = [NSDateFormatter localizedStringFromDate:[[AppXperience sharedManager] lastConnexionDate]
+                                                           dateStyle:NSDateFormatterShortStyle
+                                                           timeStyle:NSDateFormatterShortStyle];
+        
+        [self.lastConnexionL setText:dateStr];
     } error:^(NSError *error) {
         
     }];
+}
+
+- (IBAction)didTouchChangeDeveloperKey:(id)sender {
+    // Set the developer key to AppXperience objet.
+    // This key will be use for Offerwall and Interstitial.
+    [[AppXperience sharedManager] setDeveloperKey:self.keyTextField.text];
+}
+
+- (IBAction)didTouchPurgeDataButton:(id)sender {
+    self.offerWallViewController = nil;
 }
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - (void)viewDidUnload {
     [self setLastConnexionL:nil];
     [self setNumberOfNewAppsL:nil];
+    [self setKeyTextField:nil];
+    [self setKeyTextField:nil];
     [super viewDidUnload];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    
+    return YES;
 }
 
 @end

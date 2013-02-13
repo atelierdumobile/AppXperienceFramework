@@ -16,9 +16,13 @@
 
 @property (strong, nonatomic) IBOutlet UILabel *lastConnexionL;
 @property (strong, nonatomic) IBOutlet UILabel *numberOfNewAppsL;
+@property (strong, nonatomic) IBOutlet UITextField *keyTextField;
 
 - (IBAction)didClickModalButton:(id)sender;
 - (IBAction)didClickInterstitalButton:(id)sender;
 - (IBAction)didTouchFetchDataButton:(id)sender;
+- (IBAction)didTouchChangeDeveloperKey:(id)sender;
+- (IBAction)didTouchPurgeDataButton:(id)sender;
+
 
 @end

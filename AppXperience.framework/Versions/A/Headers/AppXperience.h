@@ -9,7 +9,7 @@
 #import <AppXperience/AXConstant.h>
 
 
-typedef void (^AXAppXperienceBlock)(BOOL success, NSNumber *numberNewApps);
+typedef void (^AXAppXperienceBlock)(NSNumber *numberNewApps);
 typedef void (^AXControllerBlock)(UIViewController* interstitialViewController);
 typedef void (^AXErrorBlock)(NSError* error);
 
