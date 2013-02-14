@@ -6,8 +6,6 @@
 //  Copyright (c) 2013 AppXperience. All rights reserved.
 //
 #import <Foundation/Foundation.h>
-#import <AppXperience/AXConstant.h>
-
 
 typedef void (^AXAppXperienceBlock)(NSNumber *numberNewApps);
 typedef void (^AXControllerBlock)(UIViewController* interstitialViewController);
@@ -18,7 +16,6 @@ typedef void (^AXErrorBlock)(NSError* error);
 
 @property (nonatomic, strong) NSString *developerKey;
 @property (nonatomic, assign) BOOL testMode;
-@property (nonatomic, assign) AXServerMode serverMode;
 
 /// Singleton access
 /// @return the singleton instance

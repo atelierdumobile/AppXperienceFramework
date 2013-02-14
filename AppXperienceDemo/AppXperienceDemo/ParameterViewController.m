@@ -47,7 +47,7 @@
     
     // adding waintingView bg
     UIView *bgBlack = [[UIView alloc] initWithFrame:self.view.bounds];
-    [bgBlack setBackgroundColor:RGBACOLOR(0, 0, 0, 0.7f)];
+    [bgBlack setBackgroundColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:0.7f]];
     [self.view addSubview:bgBlack];
     
     // adding waintingView activityIndicator
