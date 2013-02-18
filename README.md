@@ -91,7 +91,7 @@ pod 'AppXperience', :head
 You need to edit the plist to support a custom font. Add an entry with key:`UIAppFonts` (or `Fonts provided by application` if you are not using the raw key) and set as `itemx` value:`AppXperience.bundle/Passing Notes.ttf`. That's all.
 
 ### Normal Installation
-- Add `AppXperience.framework` to your project.
+- Add `AppXperience.framework` and `AppXperience.bundle` to your project.
 - In `Build Phases`, make sure its listed in `Link Binary With Libraries`, along with:
   - `QuartzCore.framework`
   - `UIKit.framework`
