@@ -1,11 +1,11 @@
 Pod::Spec.new do |s|
   s.name         = "AppXperience"
-  s.version      = "1.0"
+  s.version      = "1.1"
   s.summary      = "AppXperience is an advertising fmk of mobile applications."
   s.homepage     = "https://github.com/atelierdumobile/AppXperienceFramework.git"
   s.license      =  'Proprietary'
   s.author       = { "Nicolas Lauquin" => "nicolas@atelierdumobile.com" }
-  s.source       = { :git => "https://github.com/atelierdumobile/AppXperienceFramework.git" } #, :tag => "1.0"
+  s.source       = { :git => "https://github.com/atelierdumobile/AppXperienceFramework.git" } #, :tag => "1.1"
   s.platform     = :ios, '5.0'
 
   s.source_files = 'AppXperience.framework/Versions/A/Headers/*.{h}'
