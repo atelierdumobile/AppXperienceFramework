@@ -10,8 +10,6 @@
 
 @interface InAppViewController : UIViewController
 
-@property (strong, nonatomic) UIViewController * offerWallViewController;
-
 - (IBAction)didTouchModalOfferwallButton:(id)sender;
 
 @end

@@ -99,14 +99,35 @@
     }];
 }
 
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - (IBAction)didTouchChangeDeveloperKey:(id)sender {
+    [self.keyTextField resignFirstResponder];
+    
     // Set the developer key to AppXperience objet.
     // This key will be use for Offerwall and Interstitial.
     [[AppXperience sharedManager] setDeveloperKey:self.keyTextField.text];
+    
+    self.offerWallViewController = nil;// create a new offerwall
 }
 
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - (IBAction)didTouchPurgeDataButton:(id)sender {
-    self.offerWallViewController = nil;
+    self.offerWallViewController = nil;// create a new offerwall
+}
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- (IBAction)didClickChangeOfferwallDetailTimerDurationButton:(id)sender {
+    [self.offerwallDetailTimerDurationTF resignFirstResponder];
+    
+    // Set the offerwall's detail timer duration to AppXperience objet.
+    // This will be use for the left menu first close in offerwall's detail.
+    // Set -1 if the menu don't need to close automaticaly
+    CGFloat delay = [self.offerwallDetailTimerDurationTF.text floatValue];
+    [[AppXperience sharedManager] setOfferwallDetailTimerDuration:delay];
+    
+    
+    self.offerWallViewController = nil;// create a new offerwall
+    
 }
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -115,9 +136,11 @@
     [self setNumberOfNewAppsL:nil];
     [self setKeyTextField:nil];
     [self setKeyTextField:nil];
+    [self setOfferwallDetailTimerDurationTF:nil];
     [super viewDidUnload];
 }
 
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
     

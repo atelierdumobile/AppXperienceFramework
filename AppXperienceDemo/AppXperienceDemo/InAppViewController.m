@@ -34,17 +34,15 @@
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - (IBAction)didTouchModalOfferwallButton:(id)sender {
-    if (!self.offerWallViewController) {
-        // Call AppXperience to recup Offerwall controller with headerView
-        self.offerWallViewController = [[AppXperience sharedManager] offerWallViewControllerFromModal];
-    }
+    // Call AppXperience to recup Offerwall controller with headerView
+    UIViewController *offerWallViewController = [[AppXperience sharedManager] offerWallViewControllerFromModal];
     
     // Set frame to offerwallViewController's view
-    self.offerWallViewController.view.frame = self.view.frame;
+    offerWallViewController.view.frame = self.view.frame;
     
     // Present offerwallViewController
     // You must use presentViewController:animated:completion: with
     // offerWallViewControllerFromModal
-    [self presentViewController:self.offerWallViewController animated:YES completion:nil];
+    [self presentViewController:offerWallViewController animated:YES completion:nil];
 }
 @end

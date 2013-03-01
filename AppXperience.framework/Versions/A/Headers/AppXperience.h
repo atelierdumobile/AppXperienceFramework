@@ -14,16 +14,18 @@ typedef void (^AXErrorBlock)(NSError* error);
 // The singleton object from which you can configure and access the AppXperience data.
 @interface AppXperience : NSObject
 
+/// Your developer key to identify yourself on appXperience. (Mandatory)
 @property (nonatomic, strong) NSString *developerKey;
-@property (nonatomic, assign) BOOL testMode;
+
+/// Timer for the left menu close duration in offerwall's detail
+/// Optional : by default it's automatiquely closing after delay
+/// Set -1 to force user to close menu manually
+@property (nonatomic, assign) CGFloat offerwallDetailTimerDuration;
+
 
 /// Singleton access
 /// @return the singleton instance
 + (AppXperience *)sharedManager;
-
-/// Set the developer key that use to know who request the server
-/// @param key the developer
-- (void) setDeveloperKey:(NSString *)key;
 
 /// This methode call the model to get interstitial data and return an InterstitialViewController in the block
 /// @param completion return an Interstitial controller with data
