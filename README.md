@@ -66,11 +66,7 @@ You can use the pre-fetching of data so your users won't wait to display the off
     }];
 ```
 #### Debug
-No logs are displayed by default except errors.
-To have more informations about what is going on, define `kAXlogOn` to 1
-``` objective-c
-	#define kAXlogOn 1	// activate debug logs. False by default
-```
+To have displayed log you need to have the flag `DEBUG=1` in your Preprocessor Macros in your Build settings
 
 ## Installation
 ### Pod Installation
