@@ -87,9 +87,6 @@ If you would like to use the latest code of AppXperience use:
 ``` ruby
 pod 'AppXperience', :head
 ```
-#### Add font support
-You need to edit the plist to support a custom font. Add an entry with key:`UIAppFonts` (or `Fonts provided by application` if you are not using the raw key) and set as `itemx` value:`AppXperience.bundle/Passing Notes.ttf`. That's all.
-
 ### Normal Installation
 - Add `AppXperience.framework` and `AppXperience.bundle` to your project.
 - In `Build Phases`, make sure its listed in `Link Binary With Libraries`, along with:
@@ -109,9 +106,6 @@ You just need to import the files coming from the following projects:
 
  - SDWebImage ~> 3.1
    [here](https://github.com/rs/SDWebImage)
-
-#### Add font support
-You need to edit the plist to support a custom font. Add an entry with key:`UIAppFonts` (or `Fonts provided by application` if you are not using the raw key) and set as `itemx` value:`AppXperience.bundle/Passing Notes.ttf`. That's all.
 
 ## Code documentation
 The framework's headers are documented and self explanatory.
