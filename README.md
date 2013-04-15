@@ -89,6 +89,7 @@ pod 'AppXperience', :head
   - `QuartzCore.framework`
   - `UIKit.framework`
   - `CoreGraphics.framework`
+  - `CoreText.framework`
   - `Foundation.framework`
 - In `Build Settings`:
   - Under `Framework Search Paths` make sure the (parent) directory to `AppXperience.framework` is listed.
