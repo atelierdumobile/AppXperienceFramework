@@ -1,6 +1,10 @@
 AppXperience - ChangeLog
 ============ 
 
+### Version 1.0.4 2013/04/12
+- [New] No need more to declare font in .plist file
+- [New] Add tracking link on offerwall and application detail
+
 ### Version 1.0.3 2013/03/28
 - [New] change appxperience serveur url
 

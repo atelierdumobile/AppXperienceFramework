@@ -66,11 +66,7 @@ You can use the pre-fetching of data so your users won't wait to display the off
     }];
 ```
 #### Debug
-No logs are displayed by default except errors.
-To have more informations about what is going on, define `kAXlogOn` to 1
-``` objective-c
-	#define kAXlogOn 1	// activate debug logs. False by default
-```
+To have displayed log you need to have the flag `DEBUG=1` in your Preprocessor Macros in your Build settings
 
 ## Installation
 ### Pod Installation
@@ -87,8 +83,6 @@ If you would like to use the latest code of AppXperience use:
 ``` ruby
 pod 'AppXperience', :head
 ```
-#### Add font support
-You need to edit the plist to support a custom font. Add an entry with key:`UIAppFonts` (or `Fonts provided by application` if you are not using the raw key) and set as `itemx` value:`AppXperience.bundle/Passing Notes.ttf`. That's all.
 
 ### Normal Installation
 - Add `AppXperience.framework` and `AppXperience.bundle` to your project.
@@ -96,6 +90,7 @@ You need to edit the plist to support a custom font. Add an entry with key:`UIAp
   - `QuartzCore.framework`
   - `UIKit.framework`
   - `CoreGraphics.framework`
+  - `CoreText.framework`
   - `Foundation.framework`
 - In `Build Settings`:
   - Under `Framework Search Paths` make sure the (parent) directory to `AppXperience.framework` is listed.
@@ -109,9 +104,6 @@ You just need to import the files coming from the following projects:
 
  - SDWebImage ~> 3.1
    [here](https://github.com/rs/SDWebImage)
-
-#### Add font support
-You need to edit the plist to support a custom font. Add an entry with key:`UIAppFonts` (or `Fonts provided by application` if you are not using the raw key) and set as `itemx` value:`AppXperience.bundle/Passing Notes.ttf`. That's all.
 
 ## Code documentation
 The framework's headers are documented and self explanatory.
