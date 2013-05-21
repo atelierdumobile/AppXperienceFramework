@@ -8,6 +8,8 @@
 
 #import "ParameterViewController.h"
 
+#define kAppXperienceKey @"AppXperienceKey"
+
 @interface ParameterViewController ()
 
 
@@ -24,6 +26,11 @@
                                                         timeStyle:NSDateFormatterShortStyle];
     
     [self.lastConnexionL setText:dateStr];
+    
+    NSString *key = [[NSUserDefaults standardUserDefaults] stringForKey:kAppXperienceKey];
+    if (key != nil && [key isEqualToString:@""] == NO) {
+        self.keyTextField.text = key;
+    }
 }
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -102,6 +109,12 @@
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - (IBAction)didTouchChangeDeveloperKey:(id)sender {
     [self.keyTextField resignFirstResponder];
+    
+    if ([self.keyTextField.text isEqualToString:@""]) {
+        self.keyTextField.text = @"ABCDEF";
+    }
+    
+    [[NSUserDefaults standardUserDefaults] setValue:self.keyTextField.text forKey:kAppXperienceKey];
     
     // Set the developer key to AppXperience objet.
     // This key will be use for Offerwall and Interstitial.

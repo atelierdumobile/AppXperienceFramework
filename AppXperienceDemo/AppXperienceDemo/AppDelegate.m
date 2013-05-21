@@ -26,7 +26,7 @@
     [[AppXperience sharedManager] setDeveloperKey:@"ABCDEF"];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    UIViewController *viewController1 = [[InAppViewController alloc] initWithNibName:@"InAppViewController" bundle:nil];
+    //UIViewController *viewController1 = [[InAppViewController alloc] initWithNibName:@"InAppViewController" bundle:nil];
     UIViewController *viewController2 = [[ParameterViewController alloc] initWithNibName:@"ParameterViewController" bundle:nil];
     
     // Call AppXperience to recup OfferwallViewController with no headerView
@@ -35,18 +35,18 @@
     UIViewController *viewController3 = [[AppXperience sharedManager] offerWallViewControllerFromTabBar];
 	
     self.tabBarController = [[UITabBarController alloc] init];
-    self.tabBarController.viewControllers = @[viewController1, viewController2, viewController3];
+    self.tabBarController.viewControllers = @[viewController2, viewController3];
     self.window.rootViewController = self.tabBarController;
 	
-	UIViewController *tab1 =  [self.tabBarController.viewControllers objectAtIndex:0];
-	tab1.tabBarItem.image = [UIImage imageNamed:@"first.png"];
-	tab1.tabBarItem.title = NSLocalizedString(@"From App", @"From Tab");
+//	UIViewController *tab1 =  [self.tabBarController.viewControllers objectAtIndex:0];
+//	tab1.tabBarItem.image = [UIImage imageNamed:@"first.png"];
+//	tab1.tabBarItem.title = NSLocalizedString(@"From App", @"From Tab");
 	
-	UIViewController *tab2 =  [self.tabBarController.viewControllers objectAtIndex:1];
+	UIViewController *tab2 =  [self.tabBarController.viewControllers objectAtIndex:0];
 	tab2.tabBarItem.image = [UIImage imageNamed:@"second.png"];
 	tab2.tabBarItem.title = NSLocalizedString(@"Param", @"From Tab");
     
-    UIViewController *tab3 =  [self.tabBarController.viewControllers objectAtIndex:2];
+    UIViewController *tab3 =  [self.tabBarController.viewControllers objectAtIndex:1];
 	tab3.tabBarItem.image = [UIImage imageNamed:@"second.png"];
 	tab3.tabBarItem.title = NSLocalizedString(@"From Tab", @"From Tab");
 	
