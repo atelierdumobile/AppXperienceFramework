@@ -34,18 +34,17 @@
 		1513297716C171ED00C09CFF /* AppXperience.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1513297616C171ED00C09CFF /* AppXperience.framework */; };
 		1513298216C1763F00C09CFF /* ParameterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1513297C16C1763F00C09CFF /* ParameterViewController.m */; };
 		1513298316C1763F00C09CFF /* ParameterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1513297D16C1763F00C09CFF /* ParameterViewController.xib */; };
-		1513298516C1763F00C09CFF /* InAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1513298016C1763F00C09CFF /* InAppViewController.m */; };
-		1513298616C1763F00C09CFF /* InAppViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1513298116C1763F00C09CFF /* InAppViewController.xib */; };
 		15BD796616C25A5600FFD015 /* AppXperience.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 15BD796516C25A5600FFD015 /* AppXperience.bundle */; };
 		15BD797116C26AFA00FFD015 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 15BD796B16C26AFA00FFD015 /* first.png */; };
 		15BD797216C26AFA00FFD015 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 15BD796C16C26AFA00FFD015 /* first@2x.png */; };
-		15BD797316C26AFA00FFD015 /* ImageApplication_iphone4.png in Resources */ = {isa = PBXBuildFile; fileRef = 15BD796D16C26AFA00FFD015 /* ImageApplication_iphone4.png */; };
-		15BD797416C26AFA00FFD015 /* ImageApplication_iphone4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 15BD796E16C26AFA00FFD015 /* ImageApplication_iphone4@2x.png */; };
 		15BD797516C26AFA00FFD015 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 15BD796F16C26AFA00FFD015 /* second.png */; };
 		15BD797616C26AFA00FFD015 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 15BD797016C26AFA00FFD015 /* second@2x.png */; };
+		15DB0BDB179692D30010F1D9 /* TabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DB0BDA179692D20010F1D9 /* TabViewController.m */; };
 		4D3A70DE16C2CF9A00AF41F3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D3A70DD16C2CF9A00AF41F3 /* QuartzCore.framework */; };
 		4D53FF3E16C55E38007D9983 /* ImageApplication_iphone5.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D53FF3C16C55E38007D9983 /* ImageApplication_iphone5.png */; };
 		4D53FF3F16C55E38007D9983 /* ImageApplication_iphone5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D53FF3D16C55E38007D9983 /* ImageApplication_iphone5@2x.png */; };
+		4D9B215B17465621003FC58D /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D9B215A17465621003FC58D /* MediaPlayer.framework */; };
+		4D9B216217467485003FC58D /* ParameterViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D9B216117467485003FC58D /* ParameterViewController~ipad.xib */; };
 		4DD8F58C171C09CF00BDD779 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DD8F58B171C09CF00BDD779 /* CoreText.framework */; };
 		E2CAAC269E3A4E7D82C5ED27 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 063C7ECA38984FDB8D3D963A /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -79,19 +78,19 @@
 		1513297B16C1763F00C09CFF /* ParameterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParameterViewController.h; sourceTree = "<group>"; };
 		1513297C16C1763F00C09CFF /* ParameterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParameterViewController.m; sourceTree = "<group>"; };
 		1513297D16C1763F00C09CFF /* ParameterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ParameterViewController.xib; sourceTree = "<group>"; };
-		1513297F16C1763F00C09CFF /* InAppViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InAppViewController.h; sourceTree = "<group>"; };
-		1513298016C1763F00C09CFF /* InAppViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InAppViewController.m; sourceTree = "<group>"; };
-		1513298116C1763F00C09CFF /* InAppViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InAppViewController.xib; sourceTree = "<group>"; };
+		1581C00E177C624E0023CC25 /* Change Log.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "Change Log.rtf"; sourceTree = "<group>"; };
 		15BD796516C25A5600FFD015 /* AppXperience.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AppXperience.bundle; path = ../AppXperience.bundle; sourceTree = "<group>"; };
 		15BD796B16C26AFA00FFD015 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		15BD796C16C26AFA00FFD015 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		15BD796D16C26AFA00FFD015 /* ImageApplication_iphone4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ImageApplication_iphone4.png; sourceTree = "<group>"; };
-		15BD796E16C26AFA00FFD015 /* ImageApplication_iphone4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ImageApplication_iphone4@2x.png"; sourceTree = "<group>"; };
 		15BD796F16C26AFA00FFD015 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		15BD797016C26AFA00FFD015 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		15DB0BD9179692D20010F1D9 /* TabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabViewController.h; sourceTree = "<group>"; };
+		15DB0BDA179692D20010F1D9 /* TabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabViewController.m; sourceTree = "<group>"; };
 		4D3A70DD16C2CF9A00AF41F3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		4D53FF3C16C55E38007D9983 /* ImageApplication_iphone5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ImageApplication_iphone5.png; sourceTree = "<group>"; };
 		4D53FF3D16C55E38007D9983 /* ImageApplication_iphone5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ImageApplication_iphone5@2x.png"; sourceTree = "<group>"; };
+		4D9B215A17465621003FC58D /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		4D9B216117467485003FC58D /* ParameterViewController~ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "ParameterViewController~ipad.xib"; sourceTree = "<group>"; };
 		4DD8F58B171C09CF00BDD779 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		DB6117089DC2430689CF9640 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -101,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D9B215B17465621003FC58D /* MediaPlayer.framework in Frameworks */,
 				4DD8F58C171C09CF00BDD779 /* CoreText.framework in Frameworks */,
 				1513297716C171ED00C09CFF /* AppXperience.framework in Frameworks */,
 				4D3A70DE16C2CF9A00AF41F3 /* QuartzCore.framework in Frameworks */,
@@ -117,6 +117,7 @@
 		1513294D16C1719A00C09CFF = {
 			isa = PBXGroup;
 			children = (
+				1581C00E177C624E0023CC25 /* Change Log.rtf */,
 				1513295F16C1719A00C09CFF /* AppXperienceDemo */,
 				1513295816C1719A00C09CFF /* Frameworks */,
 				15BD796A16C26AFA00FFD015 /* Resources */,
@@ -136,6 +137,7 @@
 		1513295816C1719A00C09CFF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4D9B215A17465621003FC58D /* MediaPlayer.framework */,
 				4DD8F58B171C09CF00BDD779 /* CoreText.framework */,
 				15BD796516C25A5600FFD015 /* AppXperience.bundle */,
 				4D3A70DD16C2CF9A00AF41F3 /* QuartzCore.framework */,
@@ -156,9 +158,9 @@
 				1513297B16C1763F00C09CFF /* ParameterViewController.h */,
 				1513297C16C1763F00C09CFF /* ParameterViewController.m */,
 				1513297D16C1763F00C09CFF /* ParameterViewController.xib */,
-				1513297F16C1763F00C09CFF /* InAppViewController.h */,
-				1513298016C1763F00C09CFF /* InAppViewController.m */,
-				1513298116C1763F00C09CFF /* InAppViewController.xib */,
+				4D9B216117467485003FC58D /* ParameterViewController~ipad.xib */,
+				15DB0BD9179692D20010F1D9 /* TabViewController.h */,
+				15DB0BDA179692D20010F1D9 /* TabViewController.m */,
 				1513296016C1719A00C09CFF /* Supporting Files */,
 			);
 			path = AppXperienceDemo;
@@ -185,8 +187,6 @@
 				4D53FF3D16C55E38007D9983 /* ImageApplication_iphone5@2x.png */,
 				15BD796B16C26AFA00FFD015 /* first.png */,
 				15BD796C16C26AFA00FFD015 /* first@2x.png */,
-				15BD796D16C26AFA00FFD015 /* ImageApplication_iphone4.png */,
-				15BD796E16C26AFA00FFD015 /* ImageApplication_iphone4@2x.png */,
 				15BD796F16C26AFA00FFD015 /* second.png */,
 				15BD797016C26AFA00FFD015 /* second@2x.png */,
 			);
@@ -252,16 +252,14 @@
 				1513296E16C1719A00C09CFF /* Default@2x.png in Resources */,
 				1513297016C1719A00C09CFF /* Default-568h@2x.png in Resources */,
 				1513298316C1763F00C09CFF /* ParameterViewController.xib in Resources */,
-				1513298616C1763F00C09CFF /* InAppViewController.xib in Resources */,
 				15BD796616C25A5600FFD015 /* AppXperience.bundle in Resources */,
 				15BD797116C26AFA00FFD015 /* first.png in Resources */,
 				15BD797216C26AFA00FFD015 /* first@2x.png in Resources */,
-				15BD797316C26AFA00FFD015 /* ImageApplication_iphone4.png in Resources */,
-				15BD797416C26AFA00FFD015 /* ImageApplication_iphone4@2x.png in Resources */,
 				15BD797516C26AFA00FFD015 /* second.png in Resources */,
 				15BD797616C26AFA00FFD015 /* second@2x.png in Resources */,
 				4D53FF3E16C55E38007D9983 /* ImageApplication_iphone5.png in Resources */,
 				4D53FF3F16C55E38007D9983 /* ImageApplication_iphone5@2x.png in Resources */,
+				4D9B216217467485003FC58D /* ParameterViewController~ipad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,7 +303,7 @@
 				1513296616C1719A00C09CFF /* main.m in Sources */,
 				1513296A16C1719A00C09CFF /* AppDelegate.m in Sources */,
 				1513298216C1763F00C09CFF /* ParameterViewController.m in Sources */,
-				1513298516C1763F00C09CFF /* InAppViewController.m in Sources */,
+				15DB0BDB179692D30010F1D9 /* TabViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +356,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -382,6 +381,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -399,6 +399,7 @@
 				INFOPLIST_FILE = "AppXperienceDemo/AppXperienceDemo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -416,6 +417,7 @@
 				INFOPLIST_FILE = "AppXperienceDemo/AppXperienceDemo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -458,6 +460,7 @@
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PROVISIONING_PROFILE = "1A7BBA25-C881-4D47-9110-EB526B720EB6";
 				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = "Distribution (adhoc)";
@@ -475,6 +478,7 @@
 				INFOPLIST_FILE = "AppXperienceDemo/AppXperienceDemo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = "Distribution (adhoc)";

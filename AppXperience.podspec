@@ -1,13 +1,14 @@
 Pod::Spec.new do |s|
   s.name         = "AppXperience"
-  s.version      = "1.0.3"
-  s.summary      = "AppXperience is an advertising fmk of mobile applications."
+  s.version      = "1.9.3"
+  s.summary      = "AppXperience is an advertising fmk of mobile applications. Learn more at http://appxperience.com."
   s.homepage     = "https://github.com/atelierdumobile/AppXperienceFramework.git"
   s.license      = {
       :type => 'Commercial',
-      :text => 'Copyright (C) 2013 AppXperience
-	  
-                Permission is hereby granted to use this software as is, modification are not allowed.
+      :text => <<-LICENSE
+                Copyright (C) 2013 AppXperience
+
+                Permission is hereby granted to use this framework as is, modification are not allowed.
 
                 All rights reserved.
 				
@@ -17,9 +18,9 @@ Pod::Spec.new do |s|
 				AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 				LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 				OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-				THE SOFTWARE.'
+				THE SOFTWARE.
+      LICENSE
     }
-
   s.author       = { "Nicolas Lauquin" => "nicolas@atelierdumobile.com" }
   s.source       = { :git => "https://github.com/atelierdumobile/AppXperienceFramework.git" } #Take the head and not a tag, :tag => "1.0.3"}
   s.platform     = :ios, '5.0'

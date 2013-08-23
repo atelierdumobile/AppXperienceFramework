@@ -1,9 +1,11 @@
 ## Introduction
-AppXperience is an **iOS framework** to promote other applications inside your app. It is working starting iOS5 and support the iPhone 5 resolution. 
+AppXperience is an **iOS framework** to promote other applications inside your app. It is working starting iOS5 and support the iPad, iPhone4 and iPhone 5 resolution. 
 
-Two distincts components are available:
+Four distincts components are available:
   - an **interstitial** that present an app. It can be launched when the app start or anytime you want. 
+  - a **banner** that present one or many app. It can be launched anytime you want.
   - an **app discovery screen** that will present applications grouped by categories with a detail mode. This can be used as a modal view or include it in a tabbar.
+  - an **app discovery detail screen** that will present one application's categories in a detail mode. This can be used as a modal view or include it in a tabbar.
 
 ## Demo project
 An iOS demo project is available to test the different usages and check the configuration with a default API key.
@@ -35,6 +37,21 @@ It is made to display something only if the user has network and the service is 
        }];
 ```
 
+### AppXperienceBanner
+It is made to display something only if the user has network and the service is reachable. If something goes wrong banner view not return.
+
+``` objective-c
+       //Do your own loading if need to.
+      [[AppXperience sharedManager] prepareBannerWithCompletion:^(UIView *view) {
+        // We fetched with success the data, you can do post treatment data.
+        // Present the banner when you are ready in our case with an addSubview:
+        [self.view addSubview:view];
+    } error:^(NSError *error) {
+        // No network or server unavailable, we do not display the ad
+    }];
+```
+
+
 ### AppXperienceOfferwall
 
 #### First way: from a tabulation bar
@@ -65,7 +82,39 @@ You can use the pre-fetching of data so your users won't wait to display the off
          // No network or server unavailable, loading failed
     }];
 ```
-#### Debug
+
+### AppXperienceOfferpage
+
+#### First way: from a tabulation bar
+
+``` objective-c
+     UIViewController *appXperienceVC = [[AppXperience sharedManager] offerPageViewControllerFromTabBar];
+
+     //add it to your tabBarViewControllers
+     self.tabBarController.viewControllers = @[xxx, appXperienceVC];
+```
+
+#### Second way: from modal
+
+``` objective-c
+     UIViewController *offerPageViewController = [[AppXperience sharedManager] offerPageViewControllerFromModal];
+     [self presentViewController:offerPageViewController animated:YES completion:nil];
+```
+
+#### Prefetching of data : 
+You can use the pre-fetching of data so your users won't wait to display the offerwall.
+
+``` objective-c
+    // call this in your viewDidLoad or anyplace you want
+    [[AppXperience sharedManager] prepareOrRefreshOfferPageDataWithCompletion:^(NSNumber *numberNewApps) {
+        //Data are fetched correctly
+        //numberNewApps : get the number of new apps since last fetch of data. Use this to notify the user. 
+    } error:^(NSError *error) {
+         // No network or server unavailable, loading failed
+    }];
+```
+
+### Debug
 To have displayed log you need to have the flag `DEBUG=1` in your Preprocessor Macros in your Build settings
 
 ## Installation
@@ -90,6 +139,7 @@ pod 'AppXperience', :head
   - `QuartzCore.framework`
   - `UIKit.framework`
   - `CoreGraphics.framework`
+  - `MediaPlayer.framework`
   - `CoreText.framework`
   - `Foundation.framework`
 - In `Build Settings`:

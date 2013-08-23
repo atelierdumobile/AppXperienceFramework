@@ -8,8 +8,28 @@
 #import <Foundation/Foundation.h>
 
 typedef void (^AXAppXperienceBlock)(NSNumber *numberNewApps);
-typedef void (^AXControllerBlock)(UIViewController* interstitialViewController);
+typedef void (^AXBannerBlock)(UIView *view);
+typedef void (^AXControllerBlock)(UIViewController* controller);
 typedef void (^AXErrorBlock)(NSError* error);
+
+typedef enum {
+    kAXServerProd = 0,
+	kAXServerPreprod = 1,
+    kAXServerDev = 2
+} AXServerMode;
+
+#define kAXServerMode @"AXServerMode"
+
+
+typedef enum {
+    kAXInterstitialAppOfTheDay = 0,
+	kAXInterstitialImage = 1,
+    kAXInterstitialVideo = 2,
+    kAXInterstitialVideoWithImage = 3
+} AXInterstitialMode;
+
+#define kAXInterstitialMode @"AXInterstitialMode"
+
 
 // The singleton object from which you can configure and access the AppXperience data.
 @interface AppXperience : NSObject
@@ -20,8 +40,11 @@ typedef void (^AXErrorBlock)(NSError* error);
 /// Timer for the left menu close duration in offerwall's detail
 /// Optional : by default it's automatiquely closing after delay
 /// Set -1 to force user to close menu manually
-@property (nonatomic, assign) CGFloat offerwallDetailTimerDuration;
+@property (nonatomic, assign) CGFloat appSelectorClosingDuration;
 
+/// Timer for the scrollview in the baner
+/// Optional : by default 3s
+@property (nonatomic, assign) CGFloat bannerScrollDuration;
 
 /// Singleton access
 /// @return the singleton instance
@@ -33,11 +56,23 @@ typedef void (^AXErrorBlock)(NSError* error);
 -(void) prepareInterstitialWithCompletion:(AXControllerBlock) completion
                                     error:(AXErrorBlock) error;
 
+/// This methode call the model to get banner data and return an BannerView in the block
+/// @param completion return an banner view with data
+/// @param error return an error if data can't be download
+-(void) prepareBannerWithCompletion:(AXBannerBlock) completion
+                              error:(AXErrorBlock) error;
+
 
 /// This method fetch the offerwall data
-/// @param completion return a boolean success that tell you if data is fetch and numberNewApp give you the number of new application since last connexion
+/// @param completion numberNewApp give you the number of new application since last connexion
 /// @param error return an error if data can't be download
 - (void) prepareOrRefreshOfferWallDataWithCompletion:(AXAppXperienceBlock) completion
+                                               error:(AXErrorBlock) error;
+
+/// This method fetch the offerpage data
+/// @param completion numberNewApp give you the number of new application since last connexion
+/// @param error return an error if data can't be download
+- (void) prepareOrRefreshOfferPageDataWithCompletion:(AXAppXperienceBlock) completion
                                                error:(AXErrorBlock) error;
 
 /// Return the view controller of the offerwall.
@@ -52,12 +87,35 @@ typedef void (^AXErrorBlock)(NSError* error);
 /// @return return the offerwall view controller
 - (UIViewController *) offerWallViewControllerFromModal;
 
+/// Return the view controller of the offerpage.
+/// You need to retain it. This will always return a new view.
+///
+/// @return return the offerpage view controller
+- (UIViewController *) offerPageViewControllerFromTabBar;
+
+/// Return the view controller of the offerpage with headerView.
+/// You need to retain it. This will always return a new view.
+///
+/// @return return the offerpage view controller
+- (UIViewController *) offerPageViewControllerFromModal;
+
 /// Return the last connexion date since offerwallData has been fetch.
 ///
 /// @return return the date
-- (NSDate *) lastConnexionDate;
+- (NSDate *) offerwallLastConnexionDate;
 
-/// This methode purge all the saved datas
-- (void) purgeDatas;
+/// Return the last connexion date since offerpage Data has been fetch.
+///
+/// @return return the date
+- (NSDate *) offerpageLastConnexionDate;
+
+/// This methode purge all the offerwall saved datas
+- (void) purgeOfferwallDatas;
+
+/// This methode purge all the offerpage saved datas
+- (void) purgeOfferpageDatas;
+
+/// Get the version number of the fmk
+- (NSString *) version;
 
 @end
