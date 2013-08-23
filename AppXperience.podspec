@@ -22,12 +22,13 @@ Pod::Spec.new do |s|
       LICENSE
     }
   s.author       = { "Nicolas Lauquin" => "nicolas@atelierdumobile.com" }
-  s.source       = { :git => "https://github.com/atelierdumobile/AppXperienceFramework.git" } #Take the head and not a tag, :tag => "1.0.3"}
+  s.source       = { :git => "https://github.com/atelierdumobile/AppXperienceFramework.git" } #Take the head for test and not a tag
+  #s.source       = { :git => "https://github.com/atelierdumobile/AppXperienceFramework.git" , :tag => "1.9.3"}
   s.platform     = :ios, '5.0'
 
   s.source_files = 'AppXperience.framework/Versions/A/Headers/*.{h}'
   s.resources    = 'AppXperience.bundle'
-  s.frameworks   = 'QuartzCore', 'CoreGraphics', 'UIKit', 'AppXperience'
+  s.frameworks   = 'QuartzCore', 'CoreGraphics', 'MediaPlayer', 'CoreText', 'UIKit', 'AppXperience'
   s.xcconfig     =  { 'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/AppXperience/"' }
   s.preserve_paths =  'AppXperience.framework', 'AppXperience.bundle'
 
