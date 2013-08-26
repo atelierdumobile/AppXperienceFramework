@@ -8,49 +8,31 @@
 
 #import "TabViewController.h"
 
-@interface TabViewController ()
-
-@end
-
 @implementation TabViewController
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view.
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 
 #pragma marks Interface orientation
+//Specific definition to fix orientation for the tabbar
+
+//iOS5
 - (BOOL) shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    if (interfaceOrientation == UIInterfaceOrientationPortrait) {
-		return true;
+	
+	if (interfaceOrientation == UIInterfaceOrientationPortrait) {
+		return YES;
 	}
 	else {
-		return false;
+		return NO;
 	}
+	
+}
+//iOS6
+- (BOOL)shouldAutorotate {
+    return YES;
+}
+//iOS6
+- (NSUInteger)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskPortrait;
 }
 
-- (BOOL)shouldAutorotate {
-    return NO;
-}
-- (NSUInteger)supportedInterfaceOrientations {
-    return UIInterfaceOrientationPortrait;
-}
 
 @end

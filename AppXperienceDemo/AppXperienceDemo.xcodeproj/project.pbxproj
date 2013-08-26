@@ -41,8 +41,6 @@
 		15BD797616C26AFA00FFD015 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 15BD797016C26AFA00FFD015 /* second@2x.png */; };
 		15DB0BDB179692D30010F1D9 /* TabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DB0BDA179692D20010F1D9 /* TabViewController.m */; };
 		4D3A70DE16C2CF9A00AF41F3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D3A70DD16C2CF9A00AF41F3 /* QuartzCore.framework */; };
-		4D53FF3E16C55E38007D9983 /* ImageApplication_iphone5.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D53FF3C16C55E38007D9983 /* ImageApplication_iphone5.png */; };
-		4D53FF3F16C55E38007D9983 /* ImageApplication_iphone5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D53FF3D16C55E38007D9983 /* ImageApplication_iphone5@2x.png */; };
 		4D9B215B17465621003FC58D /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D9B215A17465621003FC58D /* MediaPlayer.framework */; };
 		4D9B216217467485003FC58D /* ParameterViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D9B216117467485003FC58D /* ParameterViewController~ipad.xib */; };
 		4DD8F58C171C09CF00BDD779 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DD8F58B171C09CF00BDD779 /* CoreText.framework */; };
@@ -87,8 +85,6 @@
 		15DB0BD9179692D20010F1D9 /* TabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabViewController.h; sourceTree = "<group>"; };
 		15DB0BDA179692D20010F1D9 /* TabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabViewController.m; sourceTree = "<group>"; };
 		4D3A70DD16C2CF9A00AF41F3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		4D53FF3C16C55E38007D9983 /* ImageApplication_iphone5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ImageApplication_iphone5.png; sourceTree = "<group>"; };
-		4D53FF3D16C55E38007D9983 /* ImageApplication_iphone5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ImageApplication_iphone5@2x.png"; sourceTree = "<group>"; };
 		4D9B215A17465621003FC58D /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		4D9B216117467485003FC58D /* ParameterViewController~ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "ParameterViewController~ipad.xib"; sourceTree = "<group>"; };
 		4DD8F58B171C09CF00BDD779 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
@@ -183,8 +179,6 @@
 		15BD796A16C26AFA00FFD015 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				4D53FF3C16C55E38007D9983 /* ImageApplication_iphone5.png */,
-				4D53FF3D16C55E38007D9983 /* ImageApplication_iphone5@2x.png */,
 				15BD796B16C26AFA00FFD015 /* first.png */,
 				15BD796C16C26AFA00FFD015 /* first@2x.png */,
 				15BD796F16C26AFA00FFD015 /* second.png */,
@@ -257,8 +251,6 @@
 				15BD797216C26AFA00FFD015 /* first@2x.png in Resources */,
 				15BD797516C26AFA00FFD015 /* second.png in Resources */,
 				15BD797616C26AFA00FFD015 /* second@2x.png in Resources */,
-				4D53FF3E16C55E38007D9983 /* ImageApplication_iphone5.png in Resources */,
-				4D53FF3F16C55E38007D9983 /* ImageApplication_iphone5@2x.png in Resources */,
 				4D9B216217467485003FC58D /* ParameterViewController~ipad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

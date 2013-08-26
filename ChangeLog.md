@@ -1,5 +1,7 @@
 AppXperience framework - ChangeLog
 ============ 
+### Version 1.9.4 2013/08/26
+- [Modified] fix a bug on activity indicator center when rotating the device
 
 ### Version 1.9.3 2013/08/02
 - [New] new mode of interstitiel : "interstitial video with images".

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "AppXperience"
-  s.version      = "1.9.3"
+  s.version      = "1.9.4"
   s.summary      = "AppXperience is an advertising fmk of mobile applications. Learn more at http://appxperience.com."
   s.homepage     = "https://github.com/atelierdumobile/AppXperienceFramework.git"
   s.license      = {
@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
     }
   s.author       = { "Nicolas Lauquin" => "nicolas@atelierdumobile.com" }
   s.source       = { :git => "https://github.com/atelierdumobile/AppXperienceFramework.git" } #Take the head for test and not a tag
-  #s.source       = { :git => "https://github.com/atelierdumobile/AppXperienceFramework.git" , :tag => "1.9.3"}
+  #s.source       = { :git => "https://github.com/atelierdumobile/AppXperienceFramework.git" , :tag => "1.9.4"}
   s.platform     = :ios, '5.0'
 
   s.source_files = 'AppXperience.framework/Versions/A/Headers/*.{h}'
