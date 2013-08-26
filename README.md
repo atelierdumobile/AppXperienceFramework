@@ -1,5 +1,5 @@
 ## Introduction
-AppXperience is an **iOS framework** to promote other applications inside your app. It is working starting iOS5 and support the iPad, iPhone4 and iPhone 5 resolution. 
+AppXperience is an **iOS framework** to promote other applications inside your app. It is working starting iOS5 and support the iPad, iPhone4 and iPhone 5 resolution. The screens are designed in portrait mode. 
 
 Four distincts components are available:
   - an **interstitial** that present an app. It can be launched when the app start or anytime you want. 
