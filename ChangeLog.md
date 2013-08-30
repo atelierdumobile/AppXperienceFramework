@@ -1,5 +1,8 @@
 AppXperience framework - ChangeLog
 ============ 
+### Version 1.9.5 2013/08/30
+- [Bug] offerwall topsection is opening download url.
+
 ### Version 1.9.4 2013/08/26
 - [Modified] fix a bug on activity indicator center when rotating the device
 
