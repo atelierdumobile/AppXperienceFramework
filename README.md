@@ -1,5 +1,6 @@
 ## Introduction
-AppXperience is an **iOS framework** to promote other applications inside your app. It is working starting iOS5 and support the iPad, iPhone4 and iPhone 5 resolution. The screens are designed in portrait mode. 
+AppXperience is an **iOS framework** to promote other applications inside your app. It is working for iPad, iPhone3.5"&4". The screens are designed in portrait mode.
+The SDK has been validated on iOS5 & iOS6.
 
 Four distincts components are available:
   - an **interstitial** that present an app. It can be launched when the app start or anytime you want. 
@@ -118,9 +119,13 @@ You can use the pre-fetching of data so your users won't wait to display the off
 To have displayed log you need to have the flag `DEBUG=1` in your Preprocessor Macros in your Build settings
 
 ## Installation
-### Pod Installation
+### Pod Installation (recommanded)
 
-The preferred way of installation is via [CocoaPods](http://cocoapods.org). Just add
+The recommanded way of installation is via [CocoaPods](http://cocoapods.org). 
+Pods takes care of downloading and integrating in your xCode project AppXperience in less than 1 minute.  
+If you are not using it, you should, don't waste time managing manually your frameworks.
+
+Just add in your podfile
 
 ``` ruby
 pod 'AppXperience'
@@ -133,27 +138,38 @@ If you would like to use the latest code of AppXperience use:
 pod 'AppXperience', :head
 ```
 
-### Normal Installation
+### Manual Installation
+Because the manual installation make integration more complicated and complexe for managing upgrade of frameworks we recommand you to use the "Pod Installation". If you have a good reason not using it, here are the steps:
+
 - Add `AppXperience.framework` and `AppXperience.bundle` to your project.
 - In `Build Phases`, make sure its listed in `Link Binary With Libraries`, along with:
   - `QuartzCore.framework`
-  - `UIKit.framework`
   - `CoreGraphics.framework`
   - `MediaPlayer.framework`
   - `CoreText.framework`
-  - `Foundation.framework`
+  - `ImageIO.framework`
+  - `Foundation.framework` (should be already there)
+  - `UIKit.framework` (should be already there)
+  
 - In `Build Settings`:
   - Under `Framework Search Paths` make sure the (parent) directory to `AppXperience.framework` is listed.
   - Under `Other Linker Flags` in your target, add `-ObjC` and `-all_load`
 
 #### Dependencies:
 
-You just need to import the files coming from the following projects:
- - MKNetworkKit ~> 0.85
-   [here](https://github.com/MugunthKumar/MKNetworkKit)
+You just need to import the files coming from the two following projects:
 
- - SDWebImage ~> 3.1
-   [here](https://github.com/rs/SDWebImage)
+ - [SDWebImage](https://github.com/rs/SDWebImage#installation) ~> 3.1 (Powerfull image caching fmk)
+ 
+   Just [download](https://github.com/rs/SDWebImage/releases) the release and drag the "SDWebImage.framework" to your project.
+   
+   
+ - [MKNetworkKit](https://github.com/MugunthKumar/MKNetworkKit) ~> 0.85 (Powerfull network and caching  fmk)
+
+   The official installation procedure is only supporting pods, so here are the steps:
+   - [Download](https://github.com/MugunthKumar/MKNetworkKit/releases/) the release
+   - Import in your project the **MKNetworkKit/MKNetworkKit/** folder containing all the headers and sources.
+  
 
 ## Code documentation
-The framework's headers are documented and self explanatory.
+Have a look at the AppXperience.h's headers which are documented and self explanatory.
