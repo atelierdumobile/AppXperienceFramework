@@ -9,7 +9,8 @@ Four distincts components are available:
   - an **app discovery detail screen** that will present one application's categories in a detail mode. This can be used as a modal view or include it in a tabbar.
 
 ## Demo project
-An iOS demo project is available to test the different usages and check the configuration with a default API key.
+An iOS demo project is available to test the different usages and check the configuration with a default API key. 
+**Takes care to open the workspace** ("AppXperienceDemo.xcworkspace") and not the project.
 
 ## Usage
 
@@ -46,6 +47,7 @@ It is made to display something only if the user has network and the service is 
       [[AppXperience sharedManager] prepareBannerWithCompletion:^(UIView *view) {
         // We fetched with success the data, you can do post treatment data.
         // Present the banner when you are ready in our case with an addSubview:
+        // It's a view, you are free to put them anywhere. Design on iPhone to be 640x100 and ipad:1536x122.
         [self.view addSubview:view];
     } error:^(NSError *error) {
         // No network or server unavailable, we do not display the ad
@@ -123,20 +125,45 @@ To have displayed log you need to have the flag `DEBUG=1` in your Preprocessor M
 
 The recommanded way of installation is via [CocoaPods](http://cocoapods.org). 
 Pods takes care of downloading and integrating in your xCode project AppXperience in less than 1 minute.  
-If you are not using it, you should, don't waste time managing manually your frameworks.
+If you are not using it, you should, **don't waste time managing manually your frameworks** (not only AppXperience).
 
-Just add in your podfile
+#### 0) Install cocoapods
+
+CocoaPods is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries like AFNetworking in your projects.
+
+CocoaPods is distributed as a ruby gem, and is installed by running the following commands in Terminal.app:
+
+``` bash
+$ sudo gem install cocoapods
+$ pod setup
+```
+
+#### 1) Create or update existing podfile
+
+Create if not existing a "Podfile" file. The "Podfile" is at the same level as your *.xcodeproj.
+Then add the dependancy with AppXperience like following (you can remove the version argument to always have the latest version of the fmk).
 
 ``` ruby
-pod 'AppXperience'
+platform :ios, '5.0'
+pod 'AppXperience', '~> 1.9.5'
 ```
-and run `pod install`. It will install the most recent version of AppXperience.
 
-If you would like to use the latest code of AppXperience use:
+#### 2) Install Dependencies
 
-``` ruby
-pod 'AppXperience', :head
+Now you can install the dependencies in your project:
+
+``` bash
+$ pod install
 ```
+
+From now on, be sure to always open the generated Xcode workspace (.xcworkspace) instead of the project file when building your project.
+
+####3) Dive In!
+
+At this point, everything's in place for you to start using AppXperience. Just #import the headers for the classes you need and get to it!
+
+_Theses are classic steps with cocoapods, you'll become familiar very easily with it but it is worth spending a minute reading the instructions: [http://cocoapods.org](http://cocoapods.org)._
+
 
 ### Manual Installation
 Because the manual installation make integration more complicated and complexe for managing upgrade of frameworks we recommand you to use the "Pod Installation". If you have a good reason not using it, here are the steps:
@@ -159,12 +186,12 @@ Because the manual installation make integration more complicated and complexe f
 
 You just need to import the files coming from the two following projects:
 
- - [SDWebImage](https://github.com/rs/SDWebImage#installation) ~> 3.1 (Powerfull image caching fmk)
+ - [SDWebImage](https://github.com/rs/SDWebImage#installation) ~> 3.1 (Powerfull image caching fmk - use ARC)
  
    Just [download](https://github.com/rs/SDWebImage/releases) the release and drag the "SDWebImage.framework" to your project.
    
    
- - [MKNetworkKit](https://github.com/MugunthKumar/MKNetworkKit) ~> 0.85 (Powerfull network and caching  fmk)
+ - [MKNetworkKit](https://github.com/MugunthKumar/MKNetworkKit) ~> 0.85 (Powerfull network and caching  fmk - use ARC)
 
    The official installation procedure is only supporting pods, so here are the steps:
    - [Download](https://github.com/MugunthKumar/MKNetworkKit/releases/) the release
