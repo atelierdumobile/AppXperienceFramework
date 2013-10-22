@@ -129,7 +129,7 @@ If you are not using it, you should, **don't waste time managing manually your f
 
 #### 0) Install cocoapods
 
-CocoaPods is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries like AFNetworking in your projects.
+CocoaPods is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries like AppXperience in your projects.
 
 CocoaPods is distributed as a ruby gem, and is installed by running the following commands in Terminal.app:
 
