@@ -174,7 +174,9 @@ Because the manual installation make integration more complicated and complexe f
   - `CoreGraphics.framework`
   - `MediaPlayer.framework`
   - `CoreText.framework`
-  - `ImageIO.framework`
+  - `ImageIO.framework` (SDWebImage)
+  - `CFNetwork.framework` (MKNetworking)
+  - `Security.framework` (MKNetworking)
   - `Foundation.framework` (should be already there)
   - `UIKit.framework` (should be already there)
   
