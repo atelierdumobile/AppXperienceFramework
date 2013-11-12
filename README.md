@@ -1,16 +1,17 @@
 ## Introduction
-AppXperience is an **iOS framework** to promote other applications inside your app. It is working for iPad, iPhone3.5"&4". The screens are designed in portrait mode.
+AppXperience is an **iOS framework** that lets you promote other applications within your app. It is working on iPad, iPhone 3, 4 and 5. The screens are designed in portrait mode.
 The SDK has been validated on iOS5 & iOS6.
 
-Four distincts components are available:
-  - an **interstitial** that present an app. It can be launched when the app start or anytime you want. 
-  - a **banner** that present one or many app. It can be launched anytime you want.
-  - an **app discovery screen** that will present applications grouped by categories with a detail mode. This can be used as a modal view or include it in a tabbar.
-  - an **app discovery detail screen** that will present one application's categories in a detail mode. This can be used as a modal view or include it in a tabbar.
+Four different types of ad units are available:
+
+  - an **interstitial** : full-screen format presenting an app (you can choose between static, dynamic or/and mp4). You decide when you want it to be displayed : when the app is launched,…
+  - a **banner** presenting one or many apps. It is displayed whenever you decide.
+  - an **app discovery screen** : the Offerwall presenting applications sorted by thematical categories and including a detail mode. It can be used as a modal view or included in a tab bar.
+  - an **app discovery detail screen** : the Offerpage presenting one category of applications in a detail mode. It can be used as a modal view or included in a tab bar.
 
 ## Demo project
 An iOS demo project is available to test the different usages and check the configuration with a default API key. 
-**Takes care to open the workspace** ("AppXperienceDemo.xcworkspace") and not the project.
+**Do make sure that you open the workspace** ("AppXperienceDemo.xcworkspace") and not the project.
 
 ## Usage
 
@@ -26,7 +27,7 @@ An iOS demo project is available to test the different usages and check the conf
 ```
 
 ### AppXperienceInterstitial
-It is made to display something only if the user has network and the service is reachable. If something goes wrong then won't bother the user with incomplet screen.
+It is made to be displayed if and only if the user has network and the service is reachable. If something goes wrong then the user won't be bothered with an incomplete screen.
 
 ``` objective-c
        //Do your own loading if need to.
@@ -40,7 +41,7 @@ It is made to display something only if the user has network and the service is 
 ```
 
 ### AppXperienceBanner
-It is made to display something only if the user has network and the service is reachable. If something goes wrong banner view not return.
+It is made to be displayed if and only if the user has network and the service is reachable. If something goes wrong the banner view will not be returned. You can position the banner wherever you want in your app, using a setframe.
 
 ``` objective-c
        //Do your own loading if need to.
@@ -74,7 +75,7 @@ It is made to display something only if the user has network and the service is 
 ```
 
 #### Prefetching of data : 
-You can use the pre-fetching of data so your users won't wait to display the offerwall.
+You can use the pre-fetching of data so that your users won't wait to see the offerwall.
 
 ``` objective-c
     // call this in your viewDidLoad or anyplace you want
@@ -105,7 +106,7 @@ You can use the pre-fetching of data so your users won't wait to display the off
 ```
 
 #### Prefetching of data : 
-You can use the pre-fetching of data so your users won't wait to display the offerwall.
+You can use the pre-fetching of data so that your users won't wait to view the offerwall.
 
 ``` objective-c
     // call this in your viewDidLoad or anyplace you want
@@ -121,11 +122,11 @@ You can use the pre-fetching of data so your users won't wait to display the off
 To have displayed log you need to have the flag `DEBUG=1` in your Preprocessor Macros in your Build settings
 
 ## Installation
-### Pod Installation (recommanded)
+### Pod Installation (recommended)
 
-The recommanded way of installation is via [CocoaPods](http://cocoapods.org). 
-Pods takes care of downloading and integrating in your xCode project AppXperience in less than 1 minute.  
-If you are not using it, you should, **don't waste time managing manually your frameworks** (not only AppXperience).
+The recommended way of installation is via [CocoaPods](http://cocoapods.org). 
+Pods lets you download and integrate Appxperience in your  xCode project in less than 1 minute.  
+If you are not using it, you should, **don't waste time manually managing your frameworks** (and not only AppXperience!).
 
 #### 0) Install cocoapods
 
@@ -141,7 +142,7 @@ $ pod setup
 #### 1) Create or update existing podfile
 
 Create if not existing a "Podfile" file. The "Podfile" is at the same level as your *.xcodeproj.
-Then add the dependancy with AppXperience like following (you can remove the version argument to always have the latest version of the fmk).
+Then add the dependency with AppXperience like shown below (you can remove the version argument to always have the latest version of the fmk).
 
 ``` ruby
 platform :ios, '5.0'
@@ -156,17 +157,17 @@ Now you can install the dependencies in your project:
 $ pod install
 ```
 
-From now on, be sure to always open the generated Xcode workspace (.xcworkspace) instead of the project file when building your project.
+From now on, make sure to always open the generated Xcode workspace (.xcworkspace) and not the project file when building your project.
 
 ####3) Dive In!
 
-At this point, everything's in place for you to start using AppXperience. Just #import the headers for the classes you need and get to it!
+At this point, everything is ready for you to start using AppXperience. Just #import the headers for the classes you need and get to it!
 
-_Theses are classic steps with cocoapods, you'll become familiar very easily with it but it is worth spending a minute reading the instructions: [http://cocoapods.org](http://cocoapods.org)._
+_These are classic steps with cocoapods, you'll become familiar with them very easily but it is worth spending a minute reading the instructions: [http://cocoapods.org](http://cocoapods.org)._
 
 
 ### Manual Installation
-Because the manual installation make integration more complicated and complexe for managing upgrade of frameworks we recommand you to use the "Pod Installation". If you have a good reason not using it, here are the steps:
+Because the manual installation makes integration more complicated and more complex to manage upgrades of frameworks we recommend you to use the "Pod Installation". If you have a good reason not using it, here are the steps:
 
 - Add `AppXperience.framework` and `AppXperience.bundle` to your project.
 - In `Build Phases`, make sure its listed in `Link Binary With Libraries`, along with:
@@ -188,12 +189,12 @@ Because the manual installation make integration more complicated and complexe f
 
 You just need to import the files coming from the two following projects:
 
- - [SDWebImage](https://github.com/rs/SDWebImage#installation) ~> 3.1 (Powerfull image caching fmk - use ARC)
+ - [SDWebImage](https://github.com/rs/SDWebImage#installation) ~> 3.1 (Powerful image caching fmk - use ARC)
  
    Just [download](https://github.com/rs/SDWebImage/releases) the release and drag the "SDWebImage.framework" to your project.
    
    
- - [MKNetworkKit](https://github.com/MugunthKumar/MKNetworkKit) ~> 0.85 (Powerfull network and caching  fmk - use ARC)
+ - [MKNetworkKit](https://github.com/MugunthKumar/MKNetworkKit) ~> 0.85 (Powerful network and caching  fmk - use ARC)
 
    The official installation procedure is only supporting pods, so here are the steps:
    - [Download](https://github.com/MugunthKumar/MKNetworkKit/releases/) the release
@@ -201,4 +202,4 @@ You just need to import the files coming from the two following projects:
   
 
 ## Code documentation
-Have a look at the AppXperience.h's headers which are documented and self explanatory.
+Do have a look at the AppXperience.h's headers which are documented and self-explanatory.
