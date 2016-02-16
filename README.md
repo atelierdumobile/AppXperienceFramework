@@ -125,7 +125,7 @@ To have displayed log you need to have the flag `DEBUG=1` in your Preprocessor M
 ### Pod Installation (recommended)
 
 The recommended way of installation is via [CocoaPods](http://cocoapods.org). 
-Pods lets you download and integrate Appxperience in your  xCode project in less than 1 minute.  
+Pods lets you download and integrate Appxperience in your  Xcode project in less than 1 minute.  
 If you are not using it, you should, **don't waste time manually managing your frameworks** (and not only AppXperience!).
 
 #### 0) Install cocoapods
